@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <style>
+                    div {
+                      position: fixed;
+                      left: 0;
+                      top: 0;
+                      width: 100vw;
+                      height: 100vh;
+                      /* The paint worklet subscribes to changes of these custom properties. */
+                      --blueprint-padding: 10;
+                      --blueprint-quadricule-size: 32;
+                      background-image: paint(blueprint);
+                    }
+                  </style>
+                  
+    </head>
+    <body>
+      <div></div>
+        <script>
+            CSS.paintWorklet.addModule('blueprint-painter.js');
+          </script>
+    </body>
+</html>
